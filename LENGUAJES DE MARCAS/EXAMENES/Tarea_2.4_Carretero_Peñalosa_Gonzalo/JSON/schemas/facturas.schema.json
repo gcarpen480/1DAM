@@ -1,0 +1,126 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "facturas.schema.json",
+    "title": "Factura Supermercados",
+    "description": "Gramatica para Factura",
+    "type": "object",
+    "properties": {
+        "empresa": {
+            "type": "string",
+            "description": "Nombre Supermercados"
+        },
+        "clientes": {
+            "type": "array",
+            "required":["id","dni","nombre","direccion"],
+            "additionalProperties": false,
+            "description": "Clientes",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {"$ref": "#/$defs/id"},
+                    "dni": {
+                        "type": "string",
+                        "description": "DNI del clientes"
+                    },
+                    "nombre": {
+                        "type": "string",
+                        "description": "Nombre del cliente"
+                    },
+                    "direccion": {
+                        "type": "object",
+                        "required":["domicilio","cp","poblacion"],
+                        "additionalProperties": false,
+                        "description": "Direccion del cliente",
+                        "properties": {
+                            "domicilio": {
+                                "type": "string",
+                                "description": "Domicilio del cliente"
+                            },
+                            "cp": {
+                                "type": "integer",
+                                "minimum": 1000,
+                                "maximum": 99999,
+                                "description": "Codigo Postal del Cliente"
+                            },
+                            "poblacion": {
+                                "type": "string",
+                                "description": "Poblacion del cliente"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "facturas": {
+            "type": "array",
+            "description": "Facturas de los clientes",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "codigo": {"id": {"$ref": "#/$defs/id"}},
+                    "cliente": {
+                        "type": "integer",
+                        "description": "Fecha de emision de la factura",
+                        "minimum": 1
+                    },
+                    "fecha": {
+                        "type": "string",
+                        "description": "Fecha de la factura"
+                    },
+                    "descuento":{
+                        "type": "integer",
+                        "description":"Descuento de la factura"
+                    },
+                    "contenido": {
+                        "type": "array",
+                        "description": "Producto de la factura",
+                        "items": {
+                            "properties": {
+                                "producto": {
+                                    "type": "string",
+                                    "description": "Nombre del producto"
+                                },
+                                "precio": {
+                                    "type": "number",
+                                    "description": "Precio del producto",
+                                    "minimum": 0
+                                },
+                                "cantidad": {
+                                    "type": "number",
+                                    "description": "Cantidad de producto",
+                                    "minimum": 1
+                                },
+                                "iva": {
+                                    "enum": ["reducido", "superreducido","normal"],
+                                    "description": "Tipo de IVA"
+                                }
+                            },
+                            "required": [
+                                "producto",
+                                "precio",
+                                "cantidad",
+                                "iva"
+                            ],
+                            "additionalProperties": false
+                        }
+                    }
+                },
+                "required":[
+                    "codigo",
+                    "cliente",
+                    "fecha",
+                    "descuento",
+                    "contenido"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "$defs": {
+        "id":{
+            "type": "integer",
+            "description": "Identificador unico del cliente",
+            "minimum": 1
+        }
+    }
+}

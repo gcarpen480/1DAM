@@ -1,0 +1,117 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "8concesionario.schema.json",
+    "title": "concesionario",
+    "description": "Gramática para concesionario",
+    "clientes": {
+        "type": "object",
+        "description": "Clientes del concesionario",
+        "properties": {
+            "type": "array",
+            "items": {
+                "id": {
+                    "type": "integer",
+                    "description": "Id del cliente",
+                    "minlenght": 1
+                },
+                "dni": {
+                    "type": "string",
+                    "description": "DNI del cliente"
+                },
+                "nombre": {
+                    "type": "string",
+                    "description": "Nombre del cliente"
+                },
+                "direccion": {
+                    "type": "string",
+                    "description": "DNI del cliente",
+                    "items": {
+                        "type": "array:",
+                        "description": "Información sobre la dirección de los clientes",
+                        "domicilio": {
+                            "type": "string",
+                            "description": "Calle y número"
+                        },
+                        "cp": {
+                            "type": "integer",
+                            "description": "Código postal del cliente",
+                            "minlenght": 10000,
+                            "maxlenght": 99999
+                        },
+                        "poblacion": {
+                            "type": "string",
+                            "description": "Nombre de la poblacion del cliente"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "modelos": {
+        "type": "array",
+        "description": "Información de los modelos",
+        "items": {
+            "id": {
+                "type": "integer",
+                "description": " Id del modelo",
+                "minlenght": 1
+            },
+            "nombre": {
+                "type": "string",
+                "description": " Nombre del modelo"
+            },
+            "cilindrada": {
+                "type": "integer",
+                "description": " Cilindrada del modelo",
+                "minlenght": 1000,
+                "maxlenght": 3000
+            },
+            "cv": {
+                "type": "integer",
+                "description": " Cavallos de vapor del modelo",
+                "minlenght": 100,
+                "maxlenght": 220
+            },
+            "velmax": {
+                "type": "integer",
+                "description": " Velocidad máxima del modelo",
+                "maxlenght": 200
+            },
+            "plazas": {
+                "type": "integer",
+                "description": " Número de plazas del modelo"
+            }
+        }
+    },
+    "coches": {
+        "type": "array",
+        "description": "Información de los coches del concesionario",
+        "items": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "description": "Id del coche",
+                    "minlenght": 1
+                },
+                "modelo": {
+                    "type": "integer",
+                    "description": "Modelo del coche",
+                    "minlenght": 1
+                },
+                "tipo": {
+                    "type": "string",
+                    "enum": [
+                        "nuevo",
+                        "2mano",
+                        "km0"
+                    ]
+                },
+                "reservado": {
+                    "type": "integer",
+                    "description": "Número de usuario que reserva el coche"
+                }
+            }
+        }
+    }
+}

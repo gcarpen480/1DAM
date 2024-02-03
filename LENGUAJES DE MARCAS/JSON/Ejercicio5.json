@@ -1,0 +1,53 @@
+[
+    {
+        "codigo": "1",
+        "Fecha de Emision": "2023-10-04",
+        "Datos del cliente":[
+            {
+                "DNI": "78951450H",
+                "nombre": "Pepe",
+                "Direccion": "Avenida Lola Flores",
+                "codigo postal": "88590",
+                "poblacion": "Caraculo"
+            }
+        ],
+        "Productos":[
+            {
+                "nombre": "Leche", "cantidad": 1,"unidad": "Brick", "Precio": "0,88", "IVA": "Superreducido"
+            },
+            {
+                "nombre": "Pan", "cantidad": "3 Barras", "Precio": "2,1", "IVA": "Superreducido"
+            },
+            {
+                "nombre": "Television", "cantidad": "Una", "Precio": "150", "IVA": "General"
+            }
+        ],
+        "Descuento": "35"
+    },
+    {
+        "codigo": "2",
+        "Fecha de Emision": "2023-10-04",
+        "Datos del cliente":[
+            {
+                "DNI": "78951450H",
+                "nombre": "Pablo",
+                "Direccion": "Calle Margarita Robles",
+                "codigo postal": "75921",
+                "poblacion": "Almeria"
+            }
+        ],
+        "Productos":[
+            {
+                "nombre": "Leche", "cantidad": "1 Brick", "Precio": "0,88", "IVA": "Superreducido"
+            },
+            {
+                "nombre": "Pan", "cantidad": "3 Barras", "Precio": "2,1", "IVA": "Superreducido"
+            },
+            {
+                "nombre": "Television", "cantidad": "Una", "Precio": "150", "IVA": "General"
+            }
+        ],
+        "Descuento": "15"
+    }
+    
+]

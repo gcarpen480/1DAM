@@ -1,0 +1,143 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "grafico.schema.json",
+    "title": "Grafico",
+    "description": "Gramatica para Grafico",
+    "type": "object",
+    "properties": {
+        "unidad":{
+            "type": "string",
+            "description": "Unidad del grafico"
+        },
+        "entidades":{
+            "type": "array",
+            "description": "Unidad del grafico",
+            "items":{
+                "type": "object",
+                "description": "Datos de las entidades",
+                "oneOf":[
+                    {
+                        "properties":{
+                            "id":{
+                                "type": "integer",
+                                "description": "Identificador unico del cliente",
+                                "minimum": 1
+                            },
+                            "tipo":{
+                                "const": "punto",
+                                "description": "Elementos de la figura"
+                            },
+                            "coord":{
+                                "type":"array",
+                                "description":"coordenadas de un punto",
+                                "items":{
+                                    "type":"number",
+                                    "description":"coordenada"
+                                },
+                                "minItems":2,
+                                "maxItems":2
+                            } 
+                        },
+                        "required": ["id","tipo","coord"] 
+                    },
+                    {
+                        "properties":{
+                            "id":{
+                                "type": "integer",
+                                "description": "Identificador unico",
+                                "minimum": 1
+                            },
+                            "tipo":{
+                                "const": "recta",
+                                "description": "Elementos de la figura"
+                            },
+                            "ini":{
+                                "type": "array",
+                                "description": "Coordenadas de Inicio",
+                                "items":{
+                                    "type": "number"
+                                },
+                                "minItems": 2,
+                                "maxItems": 2
+                            },
+                            "fin":{
+                                "type": "array",
+                                "description": "Coordenadas de final",
+                                "items":{
+                                    "type": "number"
+                                },
+                                "minItems": 2,
+                                "maxItems": 2
+                            }
+                        },
+                        "required":["id","tipo","ini","fin"],
+                        "additionalProperties": false
+                    },
+                    {
+                        "properties":{
+                            "id":{
+                                "type": "integer",
+                                "description": "Identificador unico",
+                                "minimum": 1
+                            },
+                            "tipo":{
+                                "const": "circunferencia",
+                                "description": "Elementos de la figura"
+                            },
+                            "centro":{
+                                "type":"array",
+                                "description":"coordenadas de una circunferencia",
+                                "items":{
+                                    "type":"number",
+                                    "description":"circunferencia"
+                                },
+                                "minItems":2,
+                                "maxItems":2
+                            },
+                            "r":{
+                                "type": "number",
+                                "description": "Radio de la circunferencia",
+                                "minimum": 1
+                            }
+                        },
+                        "required":["id","tipo","centro","r"],
+                        "additionalProperties": false
+                    },
+                    {
+                        "properties":{
+                            "id":{
+                                "type": "integer",
+                                "description": "Identificador unico",
+                                "minimum": 1
+                            },
+                            "tipo":{
+                                "const": "rectangulo",
+                                "description": "Elementos de la figura"
+                            },
+                            "ini":{
+                                "type": "array",
+                                "description": "Coordenadas de Inicio",
+                                "items":{
+                                    "type": "number"
+                                },
+                                "minItems": 2,
+                                "maxItems": 2
+                            },
+                            "fin":{
+                                "type": "array",
+                                "description": "Coordenadas de final",
+                                "items":{
+                                    "type": "number"
+                                },
+                                "minItems": 2,
+                                "maxItems": 2
+                            }
+                        },
+                        "required":["id","ini","fin","tipo"],
+                        "additionalProperties": false
+                    } 
+                ]
+            }
+        }
+    }
+}

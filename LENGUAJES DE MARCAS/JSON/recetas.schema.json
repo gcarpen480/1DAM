@@ -1,0 +1,40 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "recetas.schema.json",
+
+    "title": "Recetas",
+    "description": "Gramatica para recetas de navidad",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": ["nombre","tiempo", "ingredientes"],
+        "additionalProperties": false,
+        "properties":{
+            "nombre":{"$ref": "#$defs/nombre_estandar"},
+            "tiempo":{
+                "description": "Tiempo de elaboracion en minutos",
+                "type": "number"
+            },
+            "ingredientes":{
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties":{
+                        "nombre":{"$ref": "#$defs/nombre_estandar"},
+                        "cantidad":{ "type": "number"},
+                        "unidad":{
+                            "enum": ["pieza","gramo","ml"]
+                        }
+                    },
+                    "required": ["nombre","cantidad","unidad"],
+                    "additionalProperties": false
+                }
+            }
+        }
+    },
+    "$defs": {
+        "nombre_estandar": {
+            "type": "string"
+        }
+    }
+}

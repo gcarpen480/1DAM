@@ -1,0 +1,9 @@
+"Listado de facturas",
+
+for $factura in //factura
+
+let $nombre := //cliente[@id = $factura/@cliente]//nombre
+
+return
+
+" - " || $factura/@codigo || " : " || $nombre

@@ -1,0 +1,65 @@
+[
+    {
+        "Modelos":{
+            "Cupra Formentor":{
+                "Cilindrada": 6,
+                "Caballos de vapor": 390,
+                "Velocidad Maxima": 250,
+                "Numero de plazas": 5,
+                "Numero de coches disponinle": 10
+            },
+            "Cupra Born":{
+                "Cilindrada": 5,
+                "Caballos de vapor": 231,
+                "Velocidad Maxima": 250,
+                "Numero de plazas": 5,
+                "Numero de coches disponible": 30
+            }
+        },
+        "Unidades":[
+            {
+                "id": 8,
+                "modelo": "Formentor",
+                "km": 0,
+                "Reservado": "Paula"
+            },
+            {
+                "id": 9,
+                "modelo": "Formentor",
+                "km": 0,
+                "Reservado": "Gonzalo"
+            },
+            {
+                "id": 25,
+                "modelo": "Born",
+                "km": 0,
+                "Reservado": "Pablo"
+            }
+        ],
+        "Clientes":[
+            {
+                "Paula": {"nombre": "Paula", "Telefono": 687783654, "Direccion": "Calle Margarita Fresca"},
+                "Gonzalo": {"nombre": "Gonzalo", "Telefono": 674381597, "Direccion": "Calle Hermione Granger"},
+                "Pablo": {"nombre": "Pablo", "Telefono": 965789321, "Direccion": "Calle Manuel Martinez"}
+            }
+        ]
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+        
+        
+            
+        
+            

@@ -1,0 +1,7 @@
+for $factura in //factura
+
+let $total := sum(for $item in $factura/item return $item/@precio * $item/@cantidad)
+
+return
+
+" - "||$factura/@codigo|| ": "|| $total

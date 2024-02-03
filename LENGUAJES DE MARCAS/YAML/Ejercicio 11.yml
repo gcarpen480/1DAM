@@ -1,0 +1,30 @@
+%YAML 1.2
+---
+- unidad: centimetros
+ #Todas las unidades se expresan en centimetros
+- tipo: Punto
+  - x: 8
+    y: 9
+  - id: 1
+- tipo: recta
+  - Extremo 1:
+    - x: 12
+      y: 12
+  - Extremo 2:
+    - x: 8
+      y: 8
+  - id: 2
+- tipo: Rectangulo
+  - Esquina superior derecha:
+    - x: 10
+      y: 12
+  - Esquina superior izquirda:
+    - x: 18
+      y: 20
+  - id: 3
+- tipo: Circunferencia
+- Centro:
+  - x: 8
+    y: 9
+- Radio: 6
+- id: 4

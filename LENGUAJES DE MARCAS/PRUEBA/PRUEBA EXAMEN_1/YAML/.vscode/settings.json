@@ -1,0 +1,7 @@
+{
+    "yaml.schemas": {
+        "../JSON/schemas/prueba.schemas.json": [
+            "prueba.yml"
+        ],
+    }
+}

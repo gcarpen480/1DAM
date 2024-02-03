@@ -1,0 +1,51 @@
+%YAML 1.2
+---
+codigo: 1
+# La fecha se expresa primero el año despues el mes y por ultimo el dia
+Fecha de Emision: 2023-10-04
+Datos del cliente:
+  - DNI: 78951450H
+    nombre: Pepe
+    Direccion: Avenida Lola Flores
+    Codigo Postal: 88590
+    Poblacion: Caraculo
+Productos:
+  - nombre: Leche
+    cantidad: 1 
+    unidad: Brick
+    Precio: 0,88
+    IVA: Superreducido
+  - nombre: Pan
+    cantidad: 3
+    unidad: Barras
+    Precio: 2,1
+    IVA: Superreducido
+  - nombre: Television
+    cantidad: 1
+    Precio: 150
+    IVA: General
+Descuento: 35
+- codigo: 2
+Fecha de Emision: 2023-10-04
+Datos del cliente:
+  - DNI: 78347988P
+    nombre: Pablo
+    Direccion: Calle Margarita Robles
+    Codigo postal: 75921
+    Poblacion: Almeria
+Productos:
+  - nombre: Galletas
+    cantidad: 1
+    unidad: Caja
+    Precio: 1,50
+    IVA: Superreducido
+  - nombre: Reloj
+    cantidad: 1
+    Precio: 32,82
+    IVA: General
+  - nombre: VideoConsola
+    cantidad: 1
+    unidad: Caja
+    Precio: 350
+    IVA: General
+Descuento: 15

@@ -1,0 +1,104 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "concesionario.schema.json",
+    "title": "Concesionario de Coches",
+    "description": "Gramatica para Concesionario",
+    "type": "object",
+    "properties": {
+        "concesionario": {
+            "type": "string",
+            "description": "Nombre del concesionario"
+        },
+        "modelos": {
+            "type": "array",
+            "description": "Modelos de los coches",
+            "items": {
+                "id": {
+                    "type": "integer",
+                    "description": "Identificador unico del coche",
+                    "minimum": 1
+                },
+                "nombre": {
+                    "type": "string",
+                    "description": "Nombre del vehiculo"
+                },
+                "cilindrada": {
+                    "type": "integer",
+                    "description": "Cilindrada del vehiculo",
+                    "minlenght": 1000,
+                    "maxlenght": 3000
+                },
+                "cv": {
+                    "type": "integer",
+                    "description": "Caballos de vapor del vehiculo",
+                    "minlenght": 100,
+                    "maxlenght": 220
+                },
+                "velmax": {
+                    "type": "integer",
+                    "description": "Velocidad maxima del vehiculo",
+                    "maxlenght": 200
+                },
+                "plazas": {
+                    "type": "integer",
+                    "description": "Numero de plazas del vehiculo"
+                }
+            },
+            "required": [
+                "id",
+                "nombre",
+                "cilindrada",
+                "cv",
+                "velmax",
+                "plazas"
+            ],
+            "additionalProperties": false
+        },
+        "coches": {
+            "type": "array",
+            "description": "Coches",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "Identificador unico del coche",
+                        "minimum": 1
+                    },
+                    "modelo": {
+                        "type": "integer",
+                        "description": "Numero de modelo del vehiculo",
+                        "minimum": 1
+                    },
+                    "tipo": {
+                        "type": "string",
+                        "enum": [
+                            "nuevo",
+                            "2mano",
+                            "km0"
+                        ]
+                    },
+                    "km": {
+                        "type": "integer",
+                        "description": "Kilometros que tiene el vehiculo"
+                    },
+                    "reservado": {
+                        "type": "boolean",
+                        "description": "El vehiculo se puede encontrar reservado o no"
+                    }
+                },
+                "required": [
+                    "id",
+                    "modelo",
+                    "tipo"
+                ],
+                "additionalProperties": false,
+                "dependentSchemas": {
+                    "km": {
+                        "type": "2mano"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "tienda": {
+       "nombre": "TodoPC",
+       "inventario": {
+          "componentes": [
+             {
+                "denominacion": "RAM_32GB_KIngston",
+                "tipo": "RAM",
+                "proveedor": "Maquinones baratitos",
+                "cantidad": 5,
+                "fabricante": "Kingston",
+                "caract_ram": {
+                   "tam": 32,
+                   "frecuencia": 2133,
+                   "tecnologia": "DDR5"
+                }
+             },
+             {
+                "denominacion": "Crux_Nox",
+                "tipo": "chasis",
+                "proveedor": "Maquinones baratitos",
+                "cantidad": 4,
+                "fabricante": "Nox",
+                "caract_chasis": {
+                   "ancho": 110,
+                   "largo": 50,
+                   "alto": 80,
+                   "compatibilidad": "micro-ATX mini-ITX ATX"
+                }
+             },
+             {
+                "denominacion": "AMD_Ryzen9_7950X",
+                "tipo": "micro",
+                "proveedor": "X",
+                "cantidad": 10,
+                "fabricante": "AMD",
+                "caract_micro": {
+                   "socket": "AM5 LGA1718",
+                   "frecuencia": 4.5,
+                   "cores": 16,
+                   "maxmem": 128
+                }
+             }
+          ]
+       },
+       "configuraciones": {
+          "equipos": [
+             {
+                "nombre": "PC de ensueño",
+                "precio": 515,
+                "componentes": ["AMD_Ryzen9_7950X", "Crux_Nox", "RAM_32GB_Kingston"]
+             }
+          ]
+       }
+    }
+ }

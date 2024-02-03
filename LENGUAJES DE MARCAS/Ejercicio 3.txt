@@ -1,0 +1,16 @@
+for $factura in //factura
+
+count $i
+return
+
+(
+
+$i||". "||$factura/@codigo||" ("||$factura/@fecha||"):",
+
+
+for $item in $factura/item
+return
+
+
+"   + "||//producto[@codigo = $item/@producto]/@nombre||": "|| $item/@cantidad
+)

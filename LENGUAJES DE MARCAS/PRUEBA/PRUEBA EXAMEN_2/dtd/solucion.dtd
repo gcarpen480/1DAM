@@ -1,0 +1,37 @@
+<!-- Esto es la gramatica del examen de tema 1 -->
+<!ELEMENT tienda (inventario,configuraciones)>
+
+<!ATTLIST tienda nombre CDATA     #REQUIRED>
+<!ELEMENT inventario (componente+)>
+
+<!ELEMENT componente (cantidad,fabricante,(caract_ram|caract_micro|caract_chasis))>
+<!ATTLIST componente denominacion   CDATA       #REQUIRED
+                     tipo           CDATA       #REQUIRED
+                     proveedor      CDATA      #REQUIRED>
+
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT fabricante (#PCDATA)>
+<!ELEMENT caract_ram EMPTY>
+<!ATTLIST caract_ram tam            CDATA     #REQUIRED
+                     frecuencia     CDATA     #REQUIRED
+                     tecnologia     CDATA     #REQUIRED>
+
+<!ELEMENT caract_chasis EMPTY>
+<!ATTLIST caract_chasis ancho           CDATA  #REQUIRED
+                        largo           CDATA  #REQUIRED
+                        alto            CDATA  #REQUIRED
+                        compatibilidad  CDATA  #REQUIRED>
+<!ELEMENT caract_micro EMPTY>
+<!ATTLIST caract_micro socket       CDATA     #REQUIRED
+                       frecuencia   CDATA     #REQUIRED
+                       cores        CDATA     #REQUIRED
+                       maxmem       CDATA     #REQUIRED>
+
+<!ELEMENT configuraciones (equipo+)>
+<!ELEMENT equipo (precio,componentes)>
+<!ATTLIST equipo nombre CDATA #REQUIRED>
+
+<!ELEMENT precio (#PCDATA)>
+
+<!ELEMENT componentes (#PCDATA)>
+<!ATTLIST componentes ref CDATA #REQUIRED>

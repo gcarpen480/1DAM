@@ -1,0 +1,30 @@
+{
+    "unidad": "centimetros",
+    "entidades":[
+        {
+            "punto": {"x":8, "y":9},
+            "id": 1
+        },
+        {
+            "recta": {
+                "Extremo 1": {"x":12, "y": 12},
+                "Extremo 2": {"x":8, "y":8}
+            },
+            "id": 2
+        },
+        {
+            "Rectangulo": {
+                "Esquina superior derecha": {"x":10, "y":12},
+                "Esquina superior izquierda": {"x":18, "y":20}
+            },
+            "id": 3
+        },
+        {
+            "Circunferencia": {
+                "Centro": {"x": 8, "y":9},
+                "Radio": 6
+            },
+            "id": 4
+        }
+    ]
+}

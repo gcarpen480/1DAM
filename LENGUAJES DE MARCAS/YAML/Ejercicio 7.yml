@@ -1,0 +1,32 @@
+%YAML 1.2
+---
+- Modelos:
+  - Cupra Formentor:
+    #Las cilindradas de los coches se expresan en Centrimetos Cubicos
+    #Los caballos de vapor de los diferentes modelos se expresa en CV
+    #Las velocidades maxima de los modelos se expresa en Km
+        Cilindrada: 6
+        Caballos de vapor: 390
+        Velocidad Maxima: 250
+        Numero de plazas: 5
+        Numero de coches disponible: 10
+  - Cupra Born:
+        Cilindrada: 5
+        Caballos de vapor: 231
+        Velocidad Maxima: 160
+        Numero de plazas: 5
+        Numero de coches disponible: 30
+
+- Unidades:
+    - id: 8
+      modelo: Formentor
+      km: 0
+      Reservado: true
+    - id: 9
+      modelo: Formentor
+      km: 0
+      Reservado: true
+    - id: 25
+      modelo: Born
+      km: 0
+      Reservado: true

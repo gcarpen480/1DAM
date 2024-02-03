@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modelos>
+    <Cupra_Formentor id="f0000">
+        <!-- La medida de la cilindrada se expresa en Centrimetros Cubicos-->
+        <!-- La medida de los Caballos de vapor se expresa en -->
+        <!-- La medida de la Velocidad Maxima se expresa en Kilometros Hora-->
+        <Cilindrada>6</Cilindrada>
+        <Caballos_de_vapor>390</Caballos_de_vapor>
+        <Velocidad_Maxima>250</Velocidad_Maxima>
+        <Numero_de_plazas>5</Numero_de_plazas>
+        <Numero_de_coches_disponible>10</Numero_de_coches_disponible>
+    </Cupra_Formentor>
+    <Cupra_Born id="b0000">
+        <Cilindrada>5</Cilindrada>
+        <Caballos_de_vapor>231</Caballos_de_vapor>
+        <Velocidad_Maxima>250</Velocidad_Maxima>
+        <Numero_de_plazas>5</Numero_de_plazas>
+        <Numero_de_coches_disponible>30</Numero_de_coches_disponible>
+    </Cupra_Born>
+    <Unidades>
+        <!-- Las unidades de los kilometros que tiene los modelos se expresan en "Km"-->
+        <id id="f0008">
+            <modelo>Formentor</modelo>
+            <km>0</km>
+            <Reservado>true</Reservado>
+        </id>
+        <id id="f0009">
+            <modelo>Formentor</modelo>
+            <km>0</km>
+            <Reservado>true</Reservado>
+        </id>
+        <id id="b00025"></id>
+            <modelo>Born</modelo>
+            <km>0</km>
+            <Reservado>true</Reservado>
+    </Unidades>
+</modelos>

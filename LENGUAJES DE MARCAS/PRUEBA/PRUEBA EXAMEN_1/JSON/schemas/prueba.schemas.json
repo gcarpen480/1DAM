@@ -1,0 +1,134 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "prueba.schemas.json",
+    "title": "Prueba Examen",
+    "description": "Gramatica para Prueba",
+    "type": "object",
+    "properties": {
+        "tienda": {
+            "type": "object",
+            "properties": {
+                "nombre": {
+                    "type": "string",
+                    "description": "Nombre de la empresa"
+                },
+                "inventario": {
+                    "type": "object",
+                    "properties": {
+                        "componentes": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "denominacion": {"$ref": "#/$defs/denominacion"},
+                                    "tipo":{
+                                        "type": "string",
+                                        "description": "Tipo de componentes"
+                                    },
+                                    "proveedor":{
+                                        "type": "string",
+                                        "description": "Nombre del proveedor"
+                                    },
+                                    "cantidad":{
+                                        "type": "integer",
+                                        "description": "Cantidad de Existencia",
+                                        "minimum": 1
+                                    },
+                                    "fabricante":{
+                                        "type": "string",
+                                        "description": "Descripcion del fabricante"
+                                    },
+                                    "caract_ram":{
+                                        "type": "object",
+                                        "properties":{
+                                            "tam":{
+                                                "type": "integer",
+                                                "description": "Tamaño de la RAM",
+                                                "minimum": 1
+                                            },
+                                            "frecuencia":{
+                                                "type": "integer",
+                                                "description": "frecuencia de la RAM"
+                                            },
+                                            "tecnologia":{
+                                                "type": "string",
+                                                "description": "Version de la RAM"
+                                            }
+                                        }
+                                    },
+                                    "caract_chasis":{
+                                        "type": "object",
+                                        "properties":{
+                                            "ancho":{
+                                                "type": "integer",
+                                                "description": "Tamaño del chasis"
+                                            },
+                                            "largo":{
+                                                "type": "integer",
+                                                "description": "Largo de la caja"
+                                            },
+                                            "alto":{
+                                                "type": "integer",
+                                                "description": "Alto de la caja"
+                                            },
+                                            "compatibilidad":{
+                                                "type": "string",
+                                                "description": "Compatibilidad con placa base"
+                                            }
+                                        }
+                                    },
+                                    "caract_micro":{
+                                        "type": "object",
+                                        "properties":{
+                                            "socket":{
+                                                "type": "string",
+                                                "description": "Nombre del procesador"
+                                            },
+                                            "frecuencia":{
+                                                "type": "number",
+                                                "description": "Frecuencia del procesador"
+                                            },
+                                            "cores":{
+                                                "type": "integer",
+                                                "description": "Nucleos del procesador"
+                                            },
+                                            "maxmem":{
+                                                "type": "integer",
+                                                "description": "Max memoria"
+                                            }
+                                        }
+                                    }
+                                }   
+                            }
+                        },
+                        "configuraciones":{
+                            "type": "array",
+                            "items":{
+                                "type": "object",
+                                "properties":{
+                                    "nombre":{
+                                        "type": "string",
+                                        "description": "Nombre del Equipo"
+                                    },
+                                    "precio":{
+                                        "type": "integer",
+                                        "description": "Precio del Equipo"
+                                    },
+                                    "componentes":{
+                                        "denominacion": {"denominacion": {"$ref": "#/$defs/denominacion"}}
+                                    }
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "$defs":{
+        "denominacion":{
+            "type": "string",
+            "description": "Nombre del componentes"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+1.//factura[@descuento] 	 
+2.//factura[@fecha < "2023-00-00"]
+3.//factura[@descuento][@descuento >5]
+4.//factura[count(item)=5]
+5.//factura[item/@producto = "p01"]
+6.//cliente[direccion = "Isla Cristina"]
+7.//cliente[direccion/cp > "20999"][direccion/cp < "21008"]
+8.//producto[@iva = "superreducido"]/@nombre
+9.count(//producto[@iva = "superreducido"])
+10.//factura[sum(item/@cantidad) > 10]
+11.//factura[@fecha > "2012-11-00"][@fecha < "2012-12-00"]
+12.count(//factura[count(item) = 1])
+13.//producto[@codigo = //item/@producto]
+14.//factura[@cliente = //cliente[nombre = "Perico de los Palotes"]/@id]
+15.
+16.
+17.
+18.
+19.
+20.

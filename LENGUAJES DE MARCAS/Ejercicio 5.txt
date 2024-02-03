@@ -1,0 +1,14 @@
+
+for $encuentro in //encuentro
+
+let $local := //equipo[@id = $encuentro/@local]/@nombre
+let $visitante := //equipo[@id = $encuentro/@visitante]/@nombre
+
+return
+
+(
+"Nombre del equipo local : " || $local ||"
+"||"Goles Locales"||" = "||$encuentro/@goles_local||"
+"|| "Nombre del equipo visitante : " || $visitante ||"
+"|| "Goles Visitantes"||" = "||$encuentro/@goles_visitante
+)

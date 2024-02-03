@@ -1,0 +1,7 @@
+"Clientes del negocio:",
+
+for $nombre in //cliente
+
+return
+
+" - " || $nombre/nombre || " : " || count(//factura/@cliente = $nombre )

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elementos>
+    <!-- Todas estas medidas estan expresada en centrimetros-->
+    <Punto id="1">
+        <x>8</x>
+        <y>9</y>
+    </Punto>
+    <Recta id="2">
+        <Extremo_1>
+            <x>12</x>
+            <y>12</y>
+        </Extremo_1>
+        <Extremo_2>
+            <x>8</x>
+            <y>8</y>
+        </Extremo_2>
+    </Recta>
+    <Rectangulo id="3">
+        <Esquina_Superior_Derecha>
+            <x>10</x>
+            <y>12</y>
+        </Esquina_Superior_Derecha>
+        <Esquina_Superior_Izquierda>
+            <x>18</x>
+            <y>12</y>
+        </Esquina_Superior_Izquierda>
+    </Rectangulo>
+    <Circunferencia id="4">
+        <Centro>
+            <x>8</x>
+            <y>9</y>
+        </Centro>
+        <Radio>6</Radio>
+    </Circunferencia>
+</Elementos>

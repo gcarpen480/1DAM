@@ -1,0 +1,13 @@
+for $equipo in //equipo
+
+let $entrenador := //persona[@id = $equipo/integrantes/@entrenador]/nombre
+
+let $jugador := //persona[@id = $equipo/integrantes/@jugadores]/nombre
+
+return
+(
+
+"Nombre del equipo" ||": "|| $equipo/@nombre ||"
+" || "Jugador" || "= " || $jugador ||
+" Entrenador" || "= " || $entrenador
+)

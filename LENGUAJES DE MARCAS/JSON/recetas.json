@@ -1,0 +1,12 @@
+[
+    {
+        "nombre": "Tortilla espanola" ,
+        "tiempo": 45 ,
+        "ingredientes": [
+            {"nombre": "papa" , "unidad": "pieza", "cantidad": 21},
+            {"nombre": "huevo", "unidad": "pieza", "cantidad": 2},
+            {"nombre": "cebolla", "unidad": "pieza", "cantidad": 0.25},
+            {"nombre":"sal", "unidad": "gramo", "cantidad": 2}
+        ]    
+    }
+]

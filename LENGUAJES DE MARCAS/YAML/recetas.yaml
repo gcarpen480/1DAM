@@ -1,0 +1,22 @@
+%YAML 1.2
+---
+- nombre: Tortilla de patatas
+# Los tiempos se expresan en minutos
+tiempo: 45
+ingredientes:
+        - nombre: papas
+          cantidad: 2
+          # Las unidades pueden ser: pieza, cucharada, g y ml
+          unidad: pieza
+        - nombre: huevo
+          cantidad: 2
+          unidad: pieza
+        - nombre: aceite
+          cantidad: ml
+          unidad: 20
+        - nombre: sal
+          cantidad: 4
+          unidad: gr
+        - nombre: cebolla
+          cantidad: 25
+          unidad: pieza

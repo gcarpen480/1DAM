@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE claustro SYSTEM "dtd/casilleros2.dtd">
+<clientes>
+    <cliente id ="g000001">
+        <!-- La fecha se expresa en este orden AAAA/MM/DD -->
+        <!-- Todos los precios estan expresada en Euros -->
+        <!-- Los descuentos se expresan con porcentaje -->
+        <Fecha_de_Emision>2023-10-04</Fecha_de_Emision>
+        <DNI>78951450H</DNI>
+        <nombre>Pepe</nombre>
+        <Direccion>Avenida Lola Flores</Direccion>
+        <codigo_postal>88590</codigo_postal>
+        <poblacion>Caraculo</poblacion>
+            <productos>
+                <producto>
+                    <nombre>Leche</nombre>
+                    <cantidad>1</cantidad>
+                    <unidad>Brick</unidad>
+                    <Precio>0,88</Precio>
+                    <IVA>Superreducido</IVA>
+                </producto>
+                <producto>
+                    <nombre>Pan</nombre>
+                    <cantidad>3</cantidad>
+                    <unidad>Barras</unidad>
+                    <Precio>2,1</Precio>
+                    <IVA>Superreducido</IVA>
+                </producto>
+                <producto>
+                    <nombre>Television</nombre>
+                    <cantidad>1</cantidad>
+                    <Precio>150</Precio>
+                    <IVA>General</IVA>
+                </producto>
+            </productos>
+        <Descuento>35</Descuento>
+    </cliente>
+    <cliente id = "g000002">
+        <Fecha_de_Emision>2023-10-04</Fecha_de_Emision>
+        <DNI>78347988P</DNI>
+        <nombre>Pablo</nombre>
+        <Direccion>Calle Margarita Robles</Direccion>
+        <codigo_postal>75921</codigo_postal>
+        <poblacion>Almeria</poblacion>
+            <productos>
+                <producto>
+                    <nombre>Galletas</nombre>
+                    <cantidad>1</cantidad>
+                    <unidad>Caja</unidad>
+                    <Precio>1,50</Precio>
+                    <IVA>Superreducido</IVA>
+                </producto>
+                <producto>
+                    <nombre>Reloj</nombre>
+                    <cantidad>1</cantidad>
+                    <Precio>32,82</Precio>
+                    <IVA>General</IVA>
+                </producto>
+                <producto>
+                    <nombre>VideoConsola</nombre>
+                    <cantidad>1</cantidad>
+                    <unidad>Caja</unidad>
+                    <precio>350</precio>
+                    <IVA>General</IVA>
+                </producto>
+            </productos>
+        <Descuento>15</Descuento>
+    </cliente>
+</clientes>

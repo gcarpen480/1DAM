@@ -1,0 +1,7 @@
+{
+    "json.schemas": [
+        { "fileMatch": ["05.facturas*.json"], "url": "/schemas/facturas.schema.json"},
+        { "fileMatch": ["07.concesionario*.json"], "url": "/schemas/concesionario.schema.json"},
+        { "fileMatch": ["08.concesionario*.json"], "url": "/schemas/concesionario2.schema.json"}
+    ]
+}
